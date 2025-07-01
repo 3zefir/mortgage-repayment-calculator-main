@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+$lime: hsl(61, 70%, 52%);
+$red: hsl(4, 69%, 50%);
+$white: hsl(0, 0%, 100%);
+$slate100: hsl(202, 86%, 94%);
+$slate300: hsl(203, 41%, 72%);
+$slate500: hsl(200, 26%, 54%);
+$slate700: hsl(200, 24%, 40%);
+$slate900: hsl(202, 55%, 16%);
+$font: "Plus Jakarta Sans", sans-serif;
+
+body {
+  background-color: $slate100;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.main {
+  //margin: auto;
+  position: relative;
+  top: 200px;
+  left: 14.7%;
+  width: 70vw;
+  height: 38em;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  white-space: wrap;
+  overflow: hidden;
+  border-radius: 20px 25px 25px 20px;
+}
+
+.main__title {
+  font-family: $font;
+  font-size: 1.5em;
+  position: relative;
+  top: 25px;
+  left: 3.8%;
+}
+
+.main__button-clear {
+  text-decoration: underline;
+  background: none;
+  border: none;
+  position: relative;
+  left: 39.9%;
+  top: -15px;
+  color: $slate900;
+  font-family: $font;
+  font-size: 1em;
+}
+
+.form__amount-label {
+  font-family: $font;
+  position: relative;
+  top: 31px;
+  left: 3.8%;
+  font-size: 1em;
+  user-select: none;
+}
+
+.form__amount {
+  position: relative;
+  top: 42px;
+  left: 3.8%;
+  background-color: $slate100;
+  border: 1px solid black;
+  height: 50px;
+  width: 42.2%;
+  border-radius: 5px;
+
+}
+.form__amount-label--sign {
+  width: 10%;
+  font-family: $font;
+  font-size: 1.3em;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  height: 21px;
+  padding: 10px 0 40px 0;
+  cursor: pointer;
+  font-weight: 700;
+}
+.form__amount-input {
+  position: relative;
+  width: 90%;
+  border-radius: 0 5px 5px 0;
+  height: 40px;
+  border: none;
+  font-size: 1em;
+  top: -3px;
+  padding: 0 15px;
+  cursor: pointer;
+  font-family: $font;
+}
+
+.form__amount-input:focus {
+  outline: none;
+}
+.form__term-input:focus {
+   outline: none;
+ }
+.form__rate-input:hover {
+  outline: none;
+}
+
+.form__term-label {
+  @extend .form__amount-label;
+  top: 65px;
+}
+
+.form__term {
+  @extend .form__amount;
+  top: 79px;
+  width: 20%;
+}
+
+.form__term-label--sign {
+  @extend .form__amount-label--sign;
+  font-size: 1.2em;
+  width: 35%;
+  padding: 12px 0 36px 0;
+}
+
+.form__term-input {
+  @extend .form__amount-input;
+  top: -2px;
+  width: 65%;
+}
+
+.form__rate-label {
+  @extend .form__term-label;
+  top: -3px;
+  left: 26%;
+}
+.form__rate {
+  @extend .form__term;
+  top: 7px;
+  left: 26%;
+}
+
+.form__rate-label--sing {
+  @extend .form__term-label--sign;
+  float: right;
+  top: 0;
+  width: 27%;
+  font-size: 1.1em;
+  border-radius: 0 5px 5px 0;
+}
+.form__rate-input {
+  @extend .form__term-input;
+  top: 2px;
+  width: 73%;
+}
+
+.form__amount-input::-webkit-inner-spin-button, .form__amount-input::-webkit-inner-spin-button   {
+  -webkit-appearance: none;
+  margin: 0
+}
+
+.form__term-input::-webkit-inner-spin-button, .form__term-input::-webkit-inner-spin-button   {
+  -webkit-appearance: none;
+  margin: 0
+}
+
+.form__rate-input::-webkit-inner-spin-button, .form__rate-input::-webkit-inner-spin-button   {
+  -webkit-appearance: none;
+  margin: 0
+}
+
+
+.type__title {
+  font-family: $font;
+  font-size: 1em;
+  position: relative;
+  left: 3.8%;
+  top: 12px;
+  user-select: none;
+}
+
+.type__button-repayment {
+  position: relative;
+  left: 3.8%;
+  top: 2px;
+  width: 42.3%;
+  height: 50px;
+  text-align: left;
+  font-size: 1.15em;
+  font-family: $font;
+  border-radius: 5px;
+  font-weight: 700;
+
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.repayment__circle {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin: 3px 17px 0 10px;
+}
+
+.type__button-interest {
+  @extend .type__button-repayment;
+  top: 12px;
+}
+
+.interest__circle {
+  @extend .repayment__circle;
+}
+
+
+.form__button {
+  background-color: $lime;
+  position: relative;
+  top: 50px;
+  left: 4%;
+  width: 42.5%;
+  height: 57px;
+  text-align: left;
+  font-family: $font;
+  font-weight: 700;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 50px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.button-image {
+  margin: 0 15px 0 30px;
+}
+
+
+.main__empty-result {
+  background-color: $slate900;
+  position: absolute;
+  right: 0;
+  width: 35vw;
+  height: 100%;
+  border-radius: 0 25px 25px 80px;
+}
+
+.empty-result__image {
+  position: relative;
+  left: 30.5%;
+  top: 153px;
+}
+
+.empty-result__title {
+  margin: 0;
+  color: $white;
+  font-family: $font;
+  font-size: 1.5em;
+  position: relative;
+  top: 165px;
+  left: 27.8%;
+}
+
+.empty-result__info {
+  margin: 0;
+  color: $slate300;
+  font-family: $font;
+  white-space: pre-wrap;
+  position: relative;
+  top: 183px;
+  line-height: 23px;
+  left: 6.7%;
+  width: 85%;
+  text-align: center;
+}
+
+.amount__error {
+  font-family: $font;
+  font-size: .9em;
+  top: 61px;
+  color: $red;
+  position: absolute;
+}
+
+.term__error {
+  @extend .amount__error;
+}
+
+.rate__error {
+  @extend .amount__error;
+}
+
+.type__error {
+  @extend .amount__error;
+  top: 78%;
+  left: 3.8%;
+}
+
+.main__result {
+  @extend .main__empty-result;
+}
+
+.result__title {
+  color: white;
+  font-family: $font;
+  font-size: 1.5em;
+  position: relative;
+  top: 25px;
+  left: 7.8%;
+}
+
+.result__info {
+  color: $slate300;
+  font-family: $font;
+  width: 84%;
+  position: relative;
+  left: 7.8%;
+  top: 28px;
+  line-height: 23px;
+  font-size: 1em;
+}
+
+
+.result__card {
+  background-color: hsl(202, 55%, 11%);
+  width: 84%;
+  top: 52px;
+  border-top: 4px solid $lime;
+  border-radius: 7px 7px 0 0;
+  position: relative;
+  left: 7.8%;
+  height: 48%;
+}
+
+.card__title--month {
+  color: $slate300;
+  font-family: $font;
+  font-weight: 500;
+  font-size: 1em;
+  position: relative;
+  top: 14px;
+  left: 7.2%;
+}
+
+.card__value--month {
+  font-family: $font;
+  color: $lime;
+  font-size: 3.5em;
+  top: -14px;
+  position: relative;
+  left: 7.2%;
+}
+
+.card {
+  position: relative;
+  border-top: 1px solid white;
+  left: 7.2%;
+  top: -20px;
+  width: 84.8%;
+}
+
+.card__title {
+  color: $slate300;
+  font-family: $font;
+  font-size: 1em;
+  position: relative;
+  top: 18px;
+}
+
+.card__value {
+  color: $white;
+  font-family: $font;
+  font-size: 1.4em;
+  position: relative;
+  top: 12px;
+}
+
+@media screen and (max-width: 620px) {
+  body {
+    margin: 0;
+  }
+  .main {
+    overflow: visible;
+    border-radius: 0;
+    left: 0;
+    width: 100vw;
+  }
+  .main__empty-result {
+    position: relative;
+    top: 608px;
+    right: 68.4%;
+    border-radius: 0;
+    width: 100vw;
+  }
+
+  .result__title {
+    left: 5%;
+  }
+  .result__info {
+    left: 5%;
+  }
+  .result__card {
+    width: 91%;
+    left: 5%;
+  }
+  .main__button-clear {
+    left: 82%;
+  }
+
+  .form__amount {
+    width: 130%;
+  }
+
+  .form__term {
+    width: 55%;
+  }
+  .form__rate {
+    left: 78%;
+  }
+  .form__rate-label {
+    left: 78%;
+  }
+
+  .type__button-repayment {
+    width: 130%;
+  }
+
+  .form__button {
+    width: 130%;
+  }
+}
